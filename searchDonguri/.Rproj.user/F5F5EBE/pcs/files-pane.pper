@@ -1,0 +1,9 @@
+{
+    "path" : "~/Rprojects/searchDonguri",
+    "sortOrder" : [
+        {
+            "ascending" : true,
+            "columnIndex" : 2
+        }
+    ]
+}

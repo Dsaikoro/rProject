@@ -1,0 +1,21 @@
+{
+    "collab_server" : "",
+    "contents" : "#参考：決定木ー分類木\n#url(http://www.trifields.jp/decision-tree-classification-tree-1012)\nlibrary(rpart)      #決定木用パッケージ\nlibrary(rpart.plot) #結果を視覚的に表示するためのパッケージ\nlibrary(partykit)   #結果を視覚的に表示するためのパッケージ\n\n\nct <- rpart(type~., data = donguri2, method = \"class\")\nprint(ct)\n\n#標準のplot関数を使用\npar(xpd = NA)\nplot(ct, branch = 0.8, margin = 0.05)\ntext(ct, use.n = TRUE, all = TRUE)\n\n#rpart.plot関数を使用\nrpart.plot(ct, type=1, uniform = TRUE, extra = 1, under=1, faclen=0)\n#partykitパッケージのas.party関数を用いてデータを変換したもの\nplot(as.party(ct))\n\nprintcp(ct)\nplotcp(ct)\n",
+    "created" : 1491558576371.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "2697116722",
+    "id" : "6D5DFE1F",
+    "lastKnownWriteTime" : 1491561384,
+    "last_content_update" : 1491561384326,
+    "path" : "~/Rprojects/searchDonguri/rpart.R",
+    "project_path" : "rpart.R",
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 3,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

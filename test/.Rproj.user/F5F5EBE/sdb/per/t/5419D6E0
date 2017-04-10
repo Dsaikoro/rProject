@@ -1,0 +1,21 @@
+{
+    "collab_server" : "",
+    "contents" : "#参考\nseiseki <- matrix(c(89,90,67,46,50,57,70,80,85,90,80,90,35,40,50,40,60,50,45,55,78,85,45,55,6,55,65,80,75,85,90,85,88,92,95), 7, 5, byrow=TRUE)\ncolnames(seiseki) <- c(\"math\",\"science\",\"language\",\"english\",\"society\")\nrownames(seiseki) <- c(\"tanaka\",\"sato\",\"suzuki\",\"honda\",\"kawabata\",\"yoshino\",\"saito\")\nseiseki\n#ユークリッド距離を求める\nseiseki.d <- dist(seiseki)\nround(seiseki.d)\n\nsei.d <- dist(seiseki)\n(sei.hc <- hclust(sei.d))\n\nsummary(sei.hc)\nsei.hc$merge\n\nsei.hc$height\nsei.hc$order\npar(mfrow=c(2,2))\nplot(sei.hc, main=\"Farthest neighbor method\")\nplot(sei.hc, hang=-1, main=\"Farthest neighbor method\") #hang=-1はラベルの高さを揃える\n\ns.hc2 <- hclust(sei.d, method=\"average\")\nplot(s.hc2, hang=-1, main=\"Center of gravity method\")\n\ns.hc3 <- hclust(sei.d, method=\"ward.D2\")  #ward.D2が最新版\nplot(s.hc3, hang=-1, main=\"Ward method\")\n\niris2 <- iris[51:150, 1:4]\niris2.hc <- hclust(dist(iris2), \"ward.D2\")\n(iris2.cl <- cutree(iris2.hc, k=2))\niris2.lab <- c(rep(1,50), rep(2,50))\ntable(iris2.lab, iris2.cl)\n\niris2.cop <- cophenetic(iris2.hc)\ncor(iris2.cop, dist(iris2))\n\niris2.ta <- table(iris2.lab, iris2.cl)\nsum(diag(iris2.ta))/100\nplot(iris2.hc, hang=-1, main=\"ward.D2\")\n",
+    "created" : 1491535436400.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "3904180434",
+    "id" : "5419D6E0",
+    "lastKnownWriteTime" : 1491552036,
+    "last_content_update" : 1491552036731,
+    "path" : "~/Rprojects/test/cluster.R",
+    "project_path" : "cluster.R",
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 1,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

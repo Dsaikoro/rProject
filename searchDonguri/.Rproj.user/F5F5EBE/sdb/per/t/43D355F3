@@ -1,0 +1,29 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1491561086290.000,
+    "dirty" : false,
+    "encoding" : "",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "43D355F3",
+    "lastKnownWriteTime" : 6,
+    "last_content_update" : 1491561086290,
+    "path" : null,
+    "project_path" : null,
+    "properties" : {
+        "cacheKey" : "11750ED7",
+        "caption" : "don2",
+        "contentUrl" : "grid_resource/gridviewer.html?env=&obj=don2&cache_key=11750ED7",
+        "displayedObservations" : 131,
+        "environment" : "",
+        "object" : "don2",
+        "preview" : 0,
+        "totalObservations" : 131,
+        "variables" : 2
+    },
+    "relative_order" : 4,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_dataframe"
+}
