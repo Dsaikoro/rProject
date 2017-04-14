@@ -3,7 +3,7 @@
 #参考：R言語でSVMによる分類学習
 
 library(kernlab)
-
+donguri2_v2 <- read.csv("./donguri2.csv")
 #donguri2のデータの行数を取得
 rowdata <- nrow(donguri2_v2)
 
