@@ -3,7 +3,7 @@
 
 #現在の作業ディレクトリを調べる
 getwd()
-
+setwd("/Users/nakanodaisuke/git/rProject/searchDonguri")
 #ファイル読み込み
 donguri1 <- read.csv("donguri1.csv", header=TRUE)
 donguri2 <- read.csv("donguri2.csv", header=TRUE)

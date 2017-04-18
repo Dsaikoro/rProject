@@ -24,3 +24,4 @@ spam.bagp <- predict(spam.bag, spam.test[,-58], type="class")
 #正解率を求める
 #diag()は対角成分を取り出す関数
 sum(diag(spam.bagt))/sum(spam.bagt)
+

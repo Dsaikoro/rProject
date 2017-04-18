@@ -96,3 +96,4 @@ par(new=T)
 plot(xorc[,-3],col=c(rep('blue',50),rep('red',50)),xlim=c(-4,4),ylim=c(-4,4),pch=19,cex=1)
 par(new=T)
 contour(px,py,array(predict(xorc.gdbt,newdata=dpgrid1),dim=c(length(px),length(py))),levels=0.5,drawlabels=T,col='purple',lwd=2,xlim=c(-4,4),ylim=c(-4,4))
+
