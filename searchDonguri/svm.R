@@ -29,7 +29,8 @@ result_predict
 
 #予測結果と正解との比較
 plot(donguri_svm, data=donguri2_v2)
-table(result_predict, donguri2_predictiong$type)
+result <- table(result_predict, donguri2_predictiong$type)
+sum(diag(result))/sum(result)
 
 donguri1 <- read.csv("donguri1_v2.csv", header = TRUE)
 donguri2 <- read.csv("donguri2_v2.csv", header = TRUE)
